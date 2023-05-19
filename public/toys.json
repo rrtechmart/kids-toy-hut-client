@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "name": "Red Racing Car",
+      "image": "https://t3.ftcdn.net/jpg/01/34/86/30/240_F_134863032_44ZRzl5592GYw31teP9yyvmw9Eswz0Pt.jpg",
+      "price": 29.99,
+      "button": "View Details",
+      "category": "Ride-On Cars",
+      "subcategories": ["Sports Cars", "Race Cars", "Convertible Cars"]
+    },
+    {
+      "id": 2,
+      "name": "Blue Police Car",
+      "image": "https://t4.ftcdn.net/jpg/05/76/97/89/240_F_576978951_uBLSqSIQHz2B8dnt3wVYPuwURf1jn2bO.jpg",
+      "price": 34.99,
+      "button": "View Details",
+      "category": "Ride-On Cars",
+      "subcategories": ["Police Cars", "Emergency Vehicles", "Law Enforcement"]
+    },
+    {
+      "id": 3,
+      "name": "Pink Convertible",
+      "image": "https://t4.ftcdn.net/jpg/05/76/97/89/240_F_576978951_uBLSqSIQHz2B8dnt3wVYPuwURf1jn2bO.jpg",
+      "price": 39.99,
+      "button": "View Details",
+      "category": "Ride-On Cars",
+      "subcategories": ["Convertible Cars", "Princess Cars", "Pink Vehicles"]
+    },
+    {
+      "id": 4,
+      "name": "Yellow Off-Road Jeep",
+      "image": "https://t3.ftcdn.net/jpg/00/42/72/52/240_F_42725285_OLIInFk8bWb6XMzejI67SqPZQGsx9skO.jpg",
+      "price": 44.99,
+      "button": "View Details",
+      "category": "Ride-On Cars",
+      "subcategories": ["Off-Road Vehicles", "Jeep-style Cars", "Adventure Cars"]
+    }
+  ]
+  

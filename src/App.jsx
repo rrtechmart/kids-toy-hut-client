@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      <Tabs>
+        <TabList>
+          <Tab>Tab 1</Tab>
+          <Tab>Tab 2</Tab>
+          <Tab>Tab 3</Tab>
+        </TabList>
 
-export default App
+        <TabPanel>
+          <div>
+            <h2>Sub-Category 1</h2>
+            <img src="path/to/sub-category-1-image-1.jpg" alt="Sub-Category 1 Image 1" />
+            <img src="path/to/sub-category-1-image-2.jpg" alt="Sub-Category 1 Image 2" />
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div>
+            <h2>Sub-Category 2</h2>
+            <img src="path/to/sub-category-2-image-1.jpg" alt="Sub-Category 2 Image 1" />
+            <img src="path/to/sub-category-2-image-2.jpg" alt="Sub-Category 2 Image 2" />
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div>
+            <h2>Sub-Category 3</h2>
+            <img src="path/to/sub-category-3-image-1.jpg" alt="Sub-Category 3 Image 1" />
+            <img src="path/to/sub-category-3-image-2.jpg" alt="Sub-Category 3 Image 2" />
+          </div>
+        </TabPanel>
+      </Tabs>
+    </div>
+  );
+};
+
+export default App;
