@@ -4,14 +4,15 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Login = () => {
-    const {signIn}=useContext(AuthContext);
+    const {user, signIn}=useContext(AuthContext);
 
     const handleLogin = event =>{
         event.preventDefault();
         const form = event.target;
+        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password)
+        console.log(name,email, password)
 
         signIn(email, password)
         .then(result =>{
@@ -34,12 +35,21 @@ const Login = () => {
                 <div className="card  w-full shadow-2xl bg-base-100">
                     <div className="card-body">
                         <form onSubmit={handleLogin}>
+
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input type="text" name="name" defaultValue={user?.name} className="input input-bordered" />
+                            </div>
+
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="text" name="email" required placeholder="email" className="input input-bordered" />
                             </div>
+
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>

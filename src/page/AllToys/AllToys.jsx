@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import AllToysRow from './AllToysRow';
 
 const AllToys = () => {
-    // const allToys = useLoaderData([])
-    // const {image, price, name}= allToys;
-    // console.log(allToys);   
 
     const [allToys, setAllToys] = useState([])
 
@@ -27,7 +23,7 @@ const AllToys = () => {
                 if(data.deletedCount >0){
                     alert('Successfully deleted')
 
-                    const remaining = allToys.filter(booking => booking._id !== id)
+                    const remaining = allToys.filter(toys => toys._id !== id)
                     setAllToys(remaining);
                 }
             })
@@ -54,7 +50,7 @@ const AllToys = () => {
                             <th>Sub-category</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
-                            <th></th>
+                            <th>Details </th>
                         </tr>
                     </thead>
                     <tbody>
