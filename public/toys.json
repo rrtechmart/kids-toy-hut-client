@@ -1,39 +1,103 @@
 [
     {
-      "id": 1,
       "name": "Red Racing Car",
+      "quantity": 112,
+      "seller": "Mr. AKM cart",
       "image": "https://t3.ftcdn.net/jpg/01/34/86/30/240_F_134863032_44ZRzl5592GYw31teP9yyvmw9Eswz0Pt.jpg",
       "price": 29.99,
       "button": "View Details",
       "category": "Ride-On Cars",
+      "description": "This vehicle is user friendly, you will get the maximum satisfaction from vehicle. Hope you will come once again and you will suggest to others",
       "subcategories": ["Sports Cars", "Race Cars", "Convertible Cars"]
+      
     },
     {
-      "id": 2,
       "name": "Blue Police Car",
+      "quantity": 112,
+      "seller": "Mr. BKM Mart",
       "image": "https://t4.ftcdn.net/jpg/05/76/97/89/240_F_576978951_uBLSqSIQHz2B8dnt3wVYPuwURf1jn2bO.jpg",
       "price": 34.99,
       "button": "View Details",
-      "category": "Ride-On Cars",
+      "category": "police Cars",
+      "description": "This vehicle is user friendly, you will get the maximum satisfaction from vehicle. Hope you will come once again and you will suggest to others",
       "subcategories": ["Police Cars", "Emergency Vehicles", "Law Enforcement"]
     },
     {
-      "id": 3,
       "name": "Pink Convertible",
+      "quantity": 112,
+      "seller": "Mr. AKM cart",
       "image": "https://t4.ftcdn.net/jpg/05/76/97/89/240_F_576978951_uBLSqSIQHz2B8dnt3wVYPuwURf1jn2bO.jpg",
       "price": 39.99,
       "button": "View Details",
       "category": "Ride-On Cars",
+      "description": "This vehicle is user friendly, you will get the maximum satisfaction from vehicle. Hope you will come once again and you will suggest to others",
       "subcategories": ["Convertible Cars", "Princess Cars", "Pink Vehicles"]
     },
     {
-      "id": 4,
       "name": "Yellow Off-Road Jeep",
+      "quantity": 112,
+      "seller": "Mr. AKM cart",
       "image": "https://t3.ftcdn.net/jpg/00/42/72/52/240_F_42725285_OLIInFk8bWb6XMzejI67SqPZQGsx9skO.jpg",
       "price": 44.99,
       "button": "View Details",
       "category": "Ride-On Cars",
+      "description": "This vehicle is user friendly, you will get the maximum satisfaction from vehicle. Hope you will come once again and you will suggest to others",
       "subcategories": ["Off-Road Vehicles", "Jeep-style Cars", "Adventure Cars"]
+    },
+    {
+      "name": "Blue Police Car",
+      "quantity": 112,
+      "seller": "Mr. BKM Mart",
+      "image": "https://t4.ftcdn.net/jpg/05/76/97/89/240_F_576978951_uBLSqSIQHz2B8dnt3wVYPuwURf1jn2bO.jpg",
+      "price": 44.99,
+      "button": "View Details",
+      "category": "police Cars",
+      "description": "This vehicle is user friendly, you will get the maximum satisfaction from vehicle. Hope you will come once again and you will suggest to others",
+      "subcategories": ["blue Police Cars", "blue Emergency Vehicles", "blue Law Enforcement"]
+    },
+    {
+      "name": "Yellow Off-Road Jeep",
+      "quantity": 112,
+      "seller": "Mr. AKM cart",
+      "image": "https://t3.ftcdn.net/jpg/00/42/72/52/240_F_42725285_OLIInFk8bWb6XMzejI67SqPZQGsx9skO.jpg",
+      "price": 84.99,
+      "button": "View Details",
+      "category": "Ride-On Cars",
+      "description": "This vehicle is user friendly, you will get the maximum satisfaction from vehicle. Hope you will come once again and you will suggest to others",
+      "subcategories": ["Off-Road Vehicles", "Jeep-style Cars", "Adventure Cars"]
+    },
+    {
+      "name": "Blue Police Car",
+      "quantity": 112,
+      "seller": "Mr. BKM Mart",
+      "image": "https://t4.ftcdn.net/jpg/05/76/97/89/240_F_576978951_uBLSqSIQHz2B8dnt3wVYPuwURf1jn2bO.jpg",
+      "price": 114.99,
+      "button": "View Details",
+      "category": "police Cars",
+      "description": "This vehicle is user friendly, you will get the maximum satisfaction from vehicle. Hope you will come once again and you will suggest to others",
+      "subcategories": ["Police transport Cars", "Emergency Vehicles", "Law Enforcement"]
+    },
+    {
+      "name": "digging Car",
+      "quantity": 112,
+      "seller": "Mr. CKM Hart",
+      "image": "https://t4.ftcdn.net/jpg/05/76/97/89/240_F_576978951_uBLSqSIQHz2B8dnt3wVYPuwURf1jn2bO.jpg",
+      "price": 114.99,
+      "button": "View Details",
+      "category": "construction Cars",
+      "description": "This vehicle is user friendly, you will get the maximum satisfaction from vehicle. Hope you will come once again and you will suggest to others",
+      "subcategories": ["excavator", "trencher", "backhoe"]
+    },
+    {
+      "name": "pulling Car",
+      "quantity": 112,
+      "seller": "Mr. CKM Hart",
+      "image": "https://t4.ftcdn.net/jpg/05/76/97/89/240_F_576978951_uBLSqSIQHz2B8dnt3wVYPuwURf1jn2bO.jpg",
+      "price": 114.99,
+      "button": "View Details",
+      "category": "construction Cars",
+      "description": "This vehicle is user friendly, you will get the maximum satisfaction from vehicle. Hope you will come once again and you will suggest to others",
+      "subcategories": ["truck", "crane", "forklift"]
     }
   ]
   
