@@ -41,7 +41,7 @@ const NavBar = () => {
                     <li> <Link to='/alltoys'> All Toys</Link> </li>
                     <li> <Link to='/'> My Toys </Link> </li>
                     <li> <Link to='/addToy'> Add a Toy </Link> </li>
-                    <li> <Link to='/'> Blogs </Link> </li>
+                    <li> <Link to='/blogs'> Blogs </Link> </li>
 
                     {user?.email ? <>
                         <li> <button onClick={handleLogOut}> Logout </button> </li>

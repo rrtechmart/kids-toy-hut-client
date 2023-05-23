@@ -14,7 +14,7 @@ const AddToy = () => {
         const quantity = form.quantity.value;
         const details = form.details.value;
         const toy ={
-            toy: url,
+            toyURL: url,
             toyName,
             price,
             subCategory,
