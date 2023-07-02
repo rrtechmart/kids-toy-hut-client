@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const ToyDetailsCard = ({ toyDetail }) => {
     const { image, toyName, price, quantity } = toyDetail
