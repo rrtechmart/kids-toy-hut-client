@@ -18,10 +18,13 @@ const Order = () => {
         <div>
             <div className="mb-6">
                 <h2 className="text-4xl font-bold text-center mb-6">Category of Toys </h2>
-                <p className="text-lg">Explore a world of wonder with our diverse range of toys. Our different toys inspire learning, problem-solving, and creativity. Racing toys offer active play and adventure, from ride-on vehicles to sports equipment. Find comfort and companionship with our huggable plush toys. Each category is carefully curated for safety, durability, and maximum enjoyment. Spark curiosity, ignite imagination, and create cherished memories with our exceptional toys.</p>
+                <p className="text-lg">Explore a world of wonder with our diverse range of toys. Our different toys inspire learning, problem-solving, and creativity. Racing toys offer active play and adventure, from ride-on vehicles to sports equipment. Find comfort and companionship with our huggable plush toys. Each category is carefully curated for safety, durability, and maximum enjoyment. Spark curiosity, ignite imagination, and create cherished memories with our exceptional toys.</p> <br />
+                <p className="text-lg font-medium text-blue-600">
+                You are requested to visit our different categories of toy over the following different 3 tabs.
+                </p>
             </div>
 
-            <div>
+            <div className="mb-10">
                 <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                     <TabList>
                         <Tab>Police Car</Tab>
