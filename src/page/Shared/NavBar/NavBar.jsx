@@ -6,13 +6,18 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
 
     const handleLogOut = () => {
         logOut()
             .then(() => { })
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error)
+            })
+
     }
+
+
 
     return (
         <div className="navbar bg-base-100 mt-8">
@@ -39,11 +44,12 @@ const NavBar = () => {
                 <ul className="menu menu-horizontal px-1 font-semibold">
                     <li> <Link to='/'> Home</Link> </li>
                     <li> <Link to='/alltoys'> All Toys</Link> </li>
-                    <li> <Link to='/'> My Toys </Link> </li>
-                    <li> <Link to='/addToy'> Add a Toy </Link> </li>
                     <li> <Link to='/blogs'> Blogs </Link> </li>
+                    <li> <Link to='/order'> Order </Link> </li>
 
                     {user?.email ? <>
+                        <li> <Link to='/myToys'> My Toys </Link> </li>
+                        <li> <Link to='/addToy'> Add a Toy </Link> </li>
                         <li> <button onClick={handleLogOut}> Logout </button> </li>
                         <div className="tooltip" data-tip={user?.name}>
                             <img className="w-10 h-10" src="https://i.ibb.co/VHGb9Fx/user.jpg" alt="" />

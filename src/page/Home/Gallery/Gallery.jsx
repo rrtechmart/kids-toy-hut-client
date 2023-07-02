@@ -13,27 +13,27 @@ const Gallery = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 my-10'>
                 <div>
                     <img src={img1} alt="" />
-                    <p>Name:</p>
+                    <p>Name: Jeep car maroon</p>
                 </div>
                 <div>
                     <img src={img2} alt="" />
-                    <p>Name:</p>
+                    <p>Name:Racing car</p>
                 </div>
                 <div>
                     <img src={img3} alt="" />
-                    <p>Name:</p>
+                    <p>Name:Jeep car red</p>
                 </div>
                 <div>
                     <img src={img4} alt="" />
-                    <p>Name:</p>
+                    <p>Name:Crane </p>
                 </div>
                 <div>
                     <img src={img5} alt="" />
-                    <p>Name:</p>
+                    <p>Name:Bogati car</p>
                 </div>
                 <div>
                     <img src={img6} alt="" />
-                    <p>Name:</p>
+                    <p>Name:Racing car</p>
                 </div>
             </div>
 

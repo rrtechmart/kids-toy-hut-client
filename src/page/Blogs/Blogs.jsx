@@ -27,9 +27,22 @@ const Blogs = () => {
             <p>
                 Ans:
                 SQL: SQL databases are vertically scalable, it is table-based, so SQL databases are better for multi-row transactions, <br /> <br />
-                
+
                 NoSQL: NoSQL databases are horizontally scalable, where databases are document, key-value, graph, or wide-column stores.  so NoSQL is better for unstructured data like documents or JSON.
+
             </p>
+            <br /> <br />
+
+
+            <p className='font-medium'>Ques-3: What is express js? and What is nest js?</p>
+            <p>
+                Ans:
+            </p> <br /> <br />
+
+            <p className='font-medium'>Ques-4: What is mongodb aggregate and how does it work? </p>
+            <p>
+                Ans:
+            </p> <br /> <br />
 
 
         </div>

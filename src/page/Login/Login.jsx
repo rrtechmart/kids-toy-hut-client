@@ -1,10 +1,14 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Login = () => {
-    const {user, signIn}=useContext(AuthContext);
+    const {user, signIn, googleSignIn}=useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = event =>{
         event.preventDefault();
@@ -18,11 +22,24 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
+            navigate(from, {replace:true});
         })
         .catch(error => {
             console.log(error)
         })
 
+    }
+
+    const handleGoogleSignIn =()=>{
+        googleSignIn()
+        .then(result =>{
+            const loggedUser = result.loggedUser;
+            console.log(loggedUser);
+            navigate(from, {replace:true});
+        })
+        .catch(error =>{
+            console.log(error);
+        })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -35,14 +52,7 @@ const Login = () => {
                 <div className="card  w-full shadow-2xl bg-base-100">
                     <div className="card-body">
                         <form onSubmit={handleLogin}>
-
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input type="text" name="name" defaultValue={user?.name} className="input input-bordered" />
-                            </div>
-
+                            
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -54,9 +64,13 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name="password" required placeholder="password" className="input input-bordered" />
+                                <input type="password" name="password" required placeholder="password" className="input input-bordered" />
                                 <label className="label">
-                                    <Link className="label-text-alt link link-hover"> Sign-in with google</Link>
+
+                               <button className="btn btn-success btn-outline w-full" type="submit">
+                               <Link onClick={handleGoogleSignIn} className="label-text-alt link link-hover"> Sign-in with google</Link>
+                               </button>
+                                    
                                 </label>
                             </div>
                             <div className="form-control mt-6">
