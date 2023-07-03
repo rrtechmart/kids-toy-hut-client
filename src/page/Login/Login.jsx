@@ -4,7 +4,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Login = () => {
-    const {user, signIn, googleSignIn}=useContext(AuthContext);
+    const {signIn, googleSignIn}=useContext(AuthContext);
 
     const location = useLocation();
     const navigate = useNavigate();
