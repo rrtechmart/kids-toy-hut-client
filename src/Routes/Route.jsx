@@ -11,6 +11,7 @@ import MyToys from "../page/MyToys/MyToys";
 import UpdateMyToy from "../page/MyToys/UpdateMyToy";
 import Order from "../page/Home/Order/Order";
 import PrivateRoute from "./PrivateRoute";
+import NotFound from "../NotFound/NotFound";
 
 
 const router = createBrowserRouter([
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
           element: <UpdateMyToy></UpdateMyToy>,
           loader: ({params})=> fetch(`http://localhost:5000/singleToy/${params.id}`)
           
+        },
+        {
+          path:'*',
+          element:<NotFound></NotFound>
         }
         
       ]

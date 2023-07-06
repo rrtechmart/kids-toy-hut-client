@@ -5,11 +5,11 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const SignUp = () => {
 
-    const {createUser, updateUserProfile} =useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
-    const [error, setError]= useState('');
+    const [error, setError] = useState('');
 
-    const handleSignUp = event =>{
+    const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -18,21 +18,43 @@ const SignUp = () => {
         const photoUrl = form.photoUrl.value;
         console.log(name, email, password, photoUrl);
 
+        // if(password.length < 6){
+        //     setError('Password must have 6 or more character')
+        //     return;
+        // }
+        // else if(/(?=.*?[a-z])/.test(password)){
+        //     setError('Password should have minimum one lowercase')
+        //     return;
+        // }
+        // else if(/(?=.*?[0-9])/.test(password)){
+        //     setError('Password should have at least one digit ')
+        //     return;
+        // }
+        // else(/(?=.*?[#?!@$%^&*-])/.test(password)){
+        //     setError('Password should have one special character')
+        //     return;
+        // }
+
+
         createUser(email, password)
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-        })
-        .then(error =>{
-            console.log(error)
-        })
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .then(error => {
+                console.log(error)
+            })
 
         updateUserProfile(name, photoUrl)
-        .then(()=>{})
-        .catch(error=>{
-            console.error(error.message)
-            setError(error.message)
-        })
+            .then(() => { })
+            .catch(error => {
+                console.error(error.message)
+                setError(error.message)
+            })
+
+        
+        
+
     }
 
     return (
@@ -66,7 +88,7 @@ const SignUp = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="text" name="password" required placeholder="password" className="input input-bordered" />
-                                
+
                             </div>
 
                             <div className="form-control">
@@ -82,6 +104,8 @@ const SignUp = () => {
                         </form>
 
                         <p className="my-8">Already have an account?? <Link className="text-blue-600 font-semibold" to='/login'> Login </Link> </p>
+
+                        
 
                     </div>
                 </div>

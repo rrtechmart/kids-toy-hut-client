@@ -9,6 +9,7 @@ const AddToy = () => {
         const toyName = form.toyName.value;
         const sellerName = form.sellerName.value;
         const email = form.email.value;
+        const category = form.category.value;
         const subCategory = form.subCategory.value;
         const price = form.price.value;
         const rating = form.rating.value;
@@ -18,6 +19,7 @@ const AddToy = () => {
             toyURL: url,
             toyName,
             price,
+            category,
             subCategory,
             quantity,
             rating,
@@ -83,6 +85,13 @@ const AddToy = () => {
                                     </label>
                                     <input type="text" name='email' placeholder="Email" className="input input-bordered" />
                                 </div>
+
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text"> Category </span>
+                                    </label>
+                                    <input type="text" name='category' placeholder="category" className="input input-bordered" />
+                                </div>
                             </div>
 
                             {/* second column */}
@@ -115,17 +124,18 @@ const AddToy = () => {
                                     <input type="text" name='quantity' placeholder="Quantity" className="input input-bordered" />
                                 </div>
 
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Detail Description</span>
+                                    </label>
+                                    <input type="text" name='details' placeholder="Detail Description" className="input input-bordered" />
+                                </div>
+
                             </div>
 
 
                         </div>
 
-                        <div className="form-control w-full mx-auto px-8">
-                            <label className="label">
-                                <span className="label-text">Detail Description</span>
-                            </label>
-                            <input type="text" name='details' placeholder="Detail Description" className="input input-bordered" />
-                        </div>
 
                         <div className="form-control w-full mx-auto px-8 mt-6 mb-6">
                             <input className="btn btn-primary" type="submit" value="Add it" />
