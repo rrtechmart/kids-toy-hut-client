@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import AllToysRow from './AllToysRow';
+import { Helmet } from 'react-helmet-async';
 
 const AllToys = () => {
 
@@ -35,6 +36,10 @@ const AllToys = () => {
 
     return (
         <div>
+            <Helmet>
+                <title> Kids Toy Hut | AllToys</title>
+            </Helmet>
+
             <h2 className='text-7xl font-bold text-center my-10'>All toys </h2>
 
             {/* <Apply Search option */}

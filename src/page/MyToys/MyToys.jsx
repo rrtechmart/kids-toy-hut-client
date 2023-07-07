@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import MyToysRow from "./MyToysRow";
+import { Helmet } from "react-helmet-async";
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
@@ -38,6 +39,10 @@ const MyToys = () => {
 
     return (
         <div>
+            <Helmet>
+                <title> Kids Toy Hut | MyToys</title>
+            </Helmet>
+
             <h2>This is my toys only </h2>
 
             <div className="overflow-x-auto w-full">

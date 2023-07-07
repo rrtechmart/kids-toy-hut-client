@@ -10,9 +10,9 @@ const Order = () => {
     const initialIndex = toys.indexOf(toys)
     const [tabIndex, setTabIndex] = useState(initialIndex);
 
-    const policeCar = toys.filter(items => items.category === ('police Cars'))
-    const racingCar = toys.filter(items => items.category === ('Ride-On Cars'))
-    const constructionCar = toys.filter(items => items.category === ('construction Cars'))
+    const policeCar = toys.filter(items => items.category === ('policeCar'))
+    const racingCar = toys.filter(items => items.category === ('racingCar'))
+    const constructionCar = toys.filter(items => items.category === ('constructionCar'))
 
     return (
         <div>

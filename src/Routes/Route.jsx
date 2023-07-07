@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter} from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../page/Home/Home/Home";
 import Login from "../page/Login/Login";
@@ -15,66 +15,67 @@ import NotFound from "../NotFound/NotFound";
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      children:[
-        {
-            path:'/',
-            element: <Home></Home>
-        },
-        {
-          path:'/login',
-          element:<Login></Login>
-        },
-        {
-          path:'/signup',
-          element: <SignUp></SignUp>
-        },
-        {
-          path:'/alltoys',
-          element: <AllToys></AllToys>,
-          // loader: ()=> fetch('http://localhost:5000/toys')
-          
-        },
-        {
-          path:'/order',
-          element: <Order></Order>
-        },
-        {
-          path:'/addToy',
-          element: <PrivateRoute> <AddToy></AddToy> </PrivateRoute>
-        },
-        {
-          path:'/singleToy/:id',
-          element: <ToyDetails></ToyDetails>,
-          loader: ({params})=>fetch(`http://localhost:5000/singleToy/${params.id}`)
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
+      },
+      {
+        path: '/alltoys',
+        element: <AllToys></AllToys>,
+        // loader: ()=> fetch('http://localhost:5000/toys')
 
-        },
-        {
-          path:'/blogs',
-          element: <Blogs></Blogs>
-        },
-        {
-          path:'/myToys',
-          element: <PrivateRoute> <MyToys></MyToys> </PrivateRoute>
-        },
-        {
-          path:'/updateMyToys/:id',
-          element: <UpdateMyToy></UpdateMyToy>,
-          loader: ({params})=> fetch(`http://localhost:5000/singleToy/${params.id}`)
-          
-        },
-        {
-          path:'*',
-          element:<NotFound></NotFound>
-        }
-        
-      ]
-      
-    },
-  ]);
+      },
+      {
+        path: '/order',
+        element: <Order></Order>
+      },
+      {
+        path: '/addToy',
+        element: <PrivateRoute> <AddToy></AddToy> </PrivateRoute>
+      },
+      {
+        path: '/singleToy/:id',
+        element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/singleToy/${params.id}`)
+
+      },
+      {
+        path: '/blogs',
+        element: <Blogs></Blogs>
+      },
+      {
+        path: '/myToys',
+        element: <PrivateRoute> <MyToys></MyToys> </PrivateRoute>
+      },
+      {
+        path: '/updateMyToys/:id',
+        element: <UpdateMyToy></UpdateMyToy>,
+        loader: ({ params }) => fetch(`http://localhost:5000/singleToy/${params.id}`)
+
+      },
+      {
+        path: '*',
+        element: <NotFound></NotFound>
+      }
+
+    ]
 
 
-  export default router;
+  },
+]);
+
+
+export default router;
 

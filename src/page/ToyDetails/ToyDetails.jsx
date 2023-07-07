@@ -5,7 +5,7 @@ import { useLoaderData } from "react-router-dom";
 const ToyDetails = () => {
     const toyDetails = useLoaderData()
     
-    const {toyURL, toyName, sellerName, price, quantity, details, email} = toyDetails;
+    const {toyURL, toyName, sellerName, price, quantity, rating, details, email} = toyDetails;
     return (
         <div>
             <h2 className="text-3xl font-semibold my-8"> The toy details that you have posted is as follows .</h2>
@@ -16,6 +16,7 @@ const ToyDetails = () => {
                     <p> Seller: {sellerName} </p>
                     <p> Email: {email} </p>
                     <p> Price: {price} </p>
+                    <p> Rating: {rating} </p>
                     <p> Available Quantity: {quantity} </p>
                     <p> Description: {details} </p>
                     <div className="card-actions justify-end">
