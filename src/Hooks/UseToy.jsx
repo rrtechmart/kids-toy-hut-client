@@ -6,7 +6,7 @@ const UseToy = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://kids-toy-market-server.vercel.app/toys')
             .then(res => res.json())
             .then(data => {
                 setToys(data)

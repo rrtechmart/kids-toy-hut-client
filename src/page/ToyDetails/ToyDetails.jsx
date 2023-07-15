@@ -1,7 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 
 
-
 const ToyDetails = () => {
     const toyDetails = useLoaderData()
     

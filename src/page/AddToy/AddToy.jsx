@@ -31,7 +31,7 @@ const AddToy = () => {
         console.log(toy);
 
 
-        fetch('http://localhost:5000/toy', {
+        fetch('https://kids-toy-market-server.vercel.app/toy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +42,7 @@ const AddToy = () => {
             .then(data => {
                 console.log(data)
                 if (data.insertedId) {
-                    alert("Toy post has done successfully")
+                    alert("Toy post has been done successfully")
                 }
 
             })

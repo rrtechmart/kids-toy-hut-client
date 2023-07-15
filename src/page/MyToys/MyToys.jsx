@@ -6,20 +6,21 @@ import { Helmet } from "react-helmet-async";
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
-
-    const url = `http://localhost:5000/myToys?email=${user?.email}`;
+    
+    const url = `https://kids-toy-market-server.vercel.app/myToys?email${user?.email}`;
     useEffect(() => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
         fetch(url)
             .then(res => res.json())
             .then(data => setMyToys(data))
+            
 
-    }, [url])
+    }, [])
 
     const handleDelete = id => {
         const proceed = confirm("Are you want to delete it ")
         if (proceed) {
-            fetch(`http://localhost:5000/myToys/${id}`, {
+            fetch(`https://kids-toy-market-server.vercel.app/myToys/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

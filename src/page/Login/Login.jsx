@@ -50,6 +50,7 @@ const Login = () => {
             })
             .catch(error => {
                 const loginError = ('Either email or password is incorrect')
+                console.log(error);
                 setError(loginError)
 
             })
@@ -71,7 +72,7 @@ const Login = () => {
         <div>
             <Helmet>
                 <title> Kids Toy Hut | Login</title>
-                
+
             </Helmet>
 
             <div className="hero min-h-screen bg-base-200">
@@ -97,18 +98,21 @@ const Login = () => {
                                         <span className="label-text">Password</span>
                                     </label>
                                     <input type="password" name="password" required placeholder="password" className="input input-bordered" />
-                                    <label className="label">
 
-                                        <button className="btn btn-success btn-outline w-full" type="submit">
-                                            <Link onClick={handleGoogleSignIn} className="label-text-alt link link-hover"> Sign-in with google</Link>
-                                        </button>
-
-                                    </label>
                                 </div>
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary"><input type="submit" value="Login" /></button>
                                 </div>
                             </form>
+
+                            <div>
+                                <label className="label">
+                                    <button className="btn btn-success btn-outline w-full" type="submit">
+                                        <Link onClick={handleGoogleSignIn} className="label-text-alt link link-hover"> Sign-in with google</Link>
+                                    </button>
+
+                                </label>
+                            </div>
 
                             <p>Are you new here?? <Link className="text-blue-600 font-semibold" to='/signup'> Sign up</Link> </p>
                         </div>

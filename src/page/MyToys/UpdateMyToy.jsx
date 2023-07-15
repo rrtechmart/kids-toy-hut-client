@@ -9,7 +9,7 @@ const UpdateMyToy = () => {
 
     
 
-    // const url =`http://localhost:5000/myToys?email=${user?.email}`;
+    // const url =`https://kids-toy-market-server.vercel.app/myToys?email=${user?.email}`;
     // useEffect(()=>{
     //     fetch(url)
     //     .then(res =>res.json())
@@ -38,7 +38,7 @@ const UpdateMyToy = () => {
         // console.log(updateToy);
 
 
-        fetch(`http://localhost:5000/singleToy/${_id}`, {
+        fetch(`https://kids-toy-market-server.vercel.app/singleToy/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

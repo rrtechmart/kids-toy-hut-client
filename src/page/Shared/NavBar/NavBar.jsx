@@ -27,8 +27,20 @@ const NavBar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 3</a></li>
+                        <li> <Link to='/'> Home</Link> </li>
+                        <li> <Link to='/alltoys'> All Toys</Link> </li>
+                        <li> <Link to='/blogs'> Blogs </Link> </li>
+                        <li> <Link to='/order'> Order </Link> </li>
+
+                        {user?.email ? <>
+                            <li> <Link to='/myToys'> My Toys </Link> </li>
+                            <li> <Link to='/addToy'> Add a Toy </Link> </li>
+                            <li> <button onClick={handleLogOut}> Logout </button> </li>
+                            <div className="tooltip" data-tip={user?.name}>
+                                <img className="w-10 h-10" src="https://i.ibb.co/VHGb9Fx/user.jpg" alt="" />
+                            </div>
+                        </> :
+                            <li> <Link to='/login'> Login </Link> </li>}
                     </ul>
                 </div>
                 <Link className="btn btn-ghost normal-case text-xl">
