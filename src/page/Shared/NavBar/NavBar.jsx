@@ -63,8 +63,10 @@ const NavBar = () => {
                         <li> <Link to='/myToys'> My Toys </Link> </li>
                         <li> <Link to='/addToy'> Add a Toy </Link> </li>
                         <li> <button onClick={handleLogOut}> Logout </button> </li>
-                        <div className="tooltip" data-tip={user?.name}>
-                            <img className="w-10 h-10" src="https://i.ibb.co/VHGb9Fx/user.jpg" alt="" />
+                        <div >
+                            {/* <img className="w-10 h-10" src="https://i.ibb.co/VHGb9Fx/user.jpg" alt="" /> */}
+
+                            <img title={user?.displayName} src={user?.photoURL} alt="photo" />
                         </div>
                     </> :
                         <li> <Link to='/login'> Login </Link> </li>}
